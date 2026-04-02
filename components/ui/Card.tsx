@@ -7,26 +7,29 @@ type CardProps = {
 
 export function StatCard({ title, value, helper, trend }: CardProps) {
   return (
-    <div className="rounded-2xl border border-emerald-50 bg-white/90 px-4 py-4 shadow-[0_18px_45px_-30px_rgba(16,185,129,0.9)] ring-1 ring-emerald-50 sm:px-5">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-700/80">
-        {title}
-      </p>
-      {value && (
-        <p className="mt-2 text-2xl font-semibold leading-tight text-slate-900">
-          {value}
+    <div className="group relative overflow-hidden rounded-xl border border-slate-700/50 bg-gradient-to-br from-slate-800 to-slate-900 px-5 py-4 shadow-lg transition-all duration-200 hover:border-emerald-500/30 hover:shadow-emerald-500/10">
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+      <div className="relative">
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+          {title}
         </p>
-      )}
-      {(helper || trend) && (
-        <div className="mt-2 flex items-center justify-between text-[11px] text-slate-500">
-          {helper && <span>{helper}</span>}
-          {trend && (
-            <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 font-semibold text-emerald-800">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              {trend}
-            </span>
-          )}
-        </div>
-      )}
+        {value && (
+          <p className="mt-3 text-3xl font-bold leading-none text-slate-50">
+            {value}
+          </p>
+        )}
+        {(helper || trend) && (
+          <div className="mt-3 flex items-center justify-between text-[11px]">
+            {helper && <span className="text-slate-500">{helper}</span>}
+            {trend && (
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2 py-1 font-medium text-emerald-400">
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+                {trend}
+              </span>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
