@@ -6,6 +6,8 @@
 import { NextResponse } from "next/server";
 import { listPlans } from "@/lib/repositories/memberships";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     const plans = await listPlans();
