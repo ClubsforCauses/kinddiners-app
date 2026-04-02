@@ -2,11 +2,12 @@
  * Test database connection and verify schema
  */
 
-import { db } from "./client";
+import { getDb } from "./client";
 import { sql } from "drizzle-orm";
 
 async function testConnection() {
   console.log("Testing database connection...\n");
+  const db = getDb();
 
   try {
     const result = await db.execute(sql`SELECT version()`);

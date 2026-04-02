@@ -24,10 +24,7 @@ function getPool(): Pool {
   return globalForDb.pool;
 }
 
-export const db = new Proxy({} as ReturnType<typeof drizzle>, {
-  get(_target, prop) {
-    const pool = getPool();
-    const drizzleInstance = drizzle(pool);
-    return drizzleInstance[prop as keyof typeof drizzleInstance];
-  },
-});
+export function getDb() {
+  const pool = getPool();
+  return drizzle(pool);
+}

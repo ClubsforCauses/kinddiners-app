@@ -1,8 +1,9 @@
-import { db } from "./client";
+import { getDb } from "./client";
 import { sql } from "drizzle-orm";
 
 async function seed() {
   console.log("Seeding database...");
+  const db = getDb();
 
   await db.execute(sql`
     INSERT INTO membership_plans (

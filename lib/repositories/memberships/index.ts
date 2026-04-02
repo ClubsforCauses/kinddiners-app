@@ -5,7 +5,7 @@
  */
 
 import { eq, and, desc } from "drizzle-orm";
-import { db } from "@/lib/db/client";
+import { getDb } from "@/lib/db/client";
 import {
   membershipPlans,
   memberships,
@@ -27,7 +27,7 @@ export type {
 // ---- Membership plans ----
 
 export async function getPlanById(id: string): Promise<MembershipPlan | null> {
-  const [row] = await db
+  const [row] = await getDb()
     .select()
     .from(membershipPlans)
     .where(eq(membershipPlans.id, id))
@@ -36,7 +36,7 @@ export async function getPlanById(id: string): Promise<MembershipPlan | null> {
 }
 
 export async function getPlanByCode(code: string): Promise<MembershipPlan | null> {
-  const [row] = await db
+  const [row] = await getDb()
     .select()
     .from(membershipPlans)
     .where(eq(membershipPlans.code, code))
@@ -45,13 +45,13 @@ export async function getPlanByCode(code: string): Promise<MembershipPlan | null
 }
 
 export async function listPlans(): Promise<MembershipPlan[]> {
-  return db.select().from(membershipPlans).orderBy(membershipPlans.code);
+  return getDb().select().from(membershipPlans).orderBy(membershipPlans.code);
 }
 
 export async function createPlan(
   data: Omit<MembershipPlanInsert, "createdAt" | "updatedAt">
 ): Promise<MembershipPlan> {
-  const [row] = await db
+  const [row] = await getDb()
     .insert(membershipPlans)
     .values({
       ...data,
@@ -68,7 +68,7 @@ export async function createPlan(
 export async function createMembership(
   data: Omit<MembershipInsert, "createdAt" | "updatedAt">
 ): Promise<Membership> {
-  const [row] = await db
+  const [row] = await getDb()
     .insert(memberships)
     .values({
       ...data,
@@ -81,7 +81,7 @@ export async function createMembership(
 }
 
 export async function getMembershipById(id: string): Promise<Membership | null> {
-  const [row] = await db
+  const [row] = await getDb()
     .select()
     .from(memberships)
     .where(eq(memberships.id, id))
@@ -92,7 +92,7 @@ export async function getMembershipById(id: string): Promise<Membership | null> 
 export async function getMembershipsByProfileId(
   profileId: string
 ): Promise<Membership[]> {
-  return db
+  return getDb()
     .select()
     .from(memberships)
     .where(eq(memberships.profileId, profileId))
@@ -102,7 +102,7 @@ export async function getMembershipsByProfileId(
 export async function getActiveMembershipByProfileId(
   profileId: string
 ): Promise<Membership | null> {
-  const [row] = await db
+  const [row] = await getDb()
     .select()
     .from(memberships)
     .where(
@@ -120,7 +120,7 @@ export async function updateMembership(
   id: string,
   data: Partial<Omit<MembershipInsert, "id" | "createdAt">>
 ): Promise<Membership | null> {
-  const [row] = await db
+  const [row] = await getDb()
     .update(memberships)
     .set({ ...data, updatedAt: new Date() })
     .where(eq(memberships.id, id))
