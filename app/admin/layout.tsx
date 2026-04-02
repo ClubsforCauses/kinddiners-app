@@ -1,23 +1,22 @@
-import type { ReactNode } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 const items = [
-  { label: "Dashboard", href: "/admin/dashboard" },
-  { label: "Restaurants", href: "/admin/restaurants" },
-  { label: "Users", href: "/admin/users" },
-  { label: "Customers", href: "/admin/customers" },
-  { label: "Payouts", href: "/admin/payouts" },
-  { label: "Referral report", href: "/admin/referral-report" },
-  { label: "Content", href: "/admin/content/faq" },
-  { label: "Gifts", href: "/admin/gifts" },
-  { label: "Admins", href: "/admin/admins" },
-  { label: "Logs", href: "/admin/logs" },
+  { label: "Dashboard", href: "/(admin)/dashboard" },
+  { label: "Restaurants", href: "/(admin)/restaurants" },
+  { label: "Users", href: "/(admin)/users" },
+  { label: "Customers", href: "/(admin)/customers" },
+  { label: "Payouts", href: "/(admin)/payouts" },
+  { label: "Referral report", href: "/(admin)/referral-report" },
+  { label: "Content", href: "/(admin)/content/faq" },
+  { label: "Gifts", href: "/(admin)/gifts" },
+  { label: "Admins", href: "/(admin)/admins" },
+  { label: "Logs", href: "/(admin)/logs" },
 ];
 
 export default function AdminLayout({
   children,
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
 }) {
   return (
     <div className="flex min-h-screen bg-slate-950">
@@ -45,4 +44,3 @@ export default function AdminLayout({
     </div>
   );
 }
-

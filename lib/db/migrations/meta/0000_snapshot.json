@@ -1,5 +1,5 @@
 {
-  "id": "bea7ad1f-ee85-4c1f-a57a-05f22fc77f64",
+  "id": "b5c9157b-fee4-46c3-971a-0fa046353588",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -2168,19 +2168,6 @@
           ],
           "onDelete": "no action",
           "onUpdate": "no action"
-        },
-        "restaurant_admins_parent_admin_id_restaurant_admins_id_fk": {
-          "name": "restaurant_admins_parent_admin_id_restaurant_admins_id_fk",
-          "tableFrom": "restaurant_admins",
-          "tableTo": "restaurant_admins",
-          "columnsFrom": [
-            "parent_admin_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "set null",
-          "onUpdate": "no action"
         }
       },
       "compositePrimaryKeys": {},
@@ -2656,7 +2643,105 @@
       "isRLSEnabled": false
     }
   },
-  "enums": {},
+  "enums": {
+    "public.app_role": {
+      "name": "app_role",
+      "schema": "public",
+      "values": [
+        "member",
+        "restaurant_admin",
+        "admin"
+      ]
+    },
+    "public.email_event_type": {
+      "name": "email_event_type",
+      "schema": "public",
+      "values": [
+        "welcome",
+        "cancel",
+        "renewal",
+        "gift_delivery",
+        "password_reset",
+        "referral",
+        "other"
+      ]
+    },
+    "public.gift_code_status": {
+      "name": "gift_code_status",
+      "schema": "public",
+      "values": [
+        "available",
+        "redeemed",
+        "expired",
+        "revoked"
+      ]
+    },
+    "public.itb_application_status": {
+      "name": "itb_application_status",
+      "schema": "public",
+      "values": [
+        "pending",
+        "approved",
+        "rejected"
+      ]
+    },
+    "public.membership_source": {
+      "name": "membership_source",
+      "schema": "public",
+      "values": [
+        "direct",
+        "promo",
+        "gift",
+        "complimentary",
+        "itb",
+        "first_responder"
+      ]
+    },
+    "public.membership_status": {
+      "name": "membership_status",
+      "schema": "public",
+      "values": [
+        "active",
+        "canceled",
+        "past_due",
+        "trialing",
+        "gifted",
+        "expired",
+        "inactive"
+      ]
+    },
+    "public.payout_status": {
+      "name": "payout_status",
+      "schema": "public",
+      "values": [
+        "draft",
+        "pending_submission",
+        "pending_approval",
+        "approved",
+        "paid",
+        "rejected",
+        "canceled"
+      ]
+    },
+    "public.redemption_method": {
+      "name": "redemption_method",
+      "schema": "public",
+      "values": [
+        "member_scan",
+        "restaurant_scan"
+      ]
+    },
+    "public.tremendous_order_status": {
+      "name": "tremendous_order_status",
+      "schema": "public",
+      "values": [
+        "pending",
+        "paid",
+        "rejected",
+        "canceled"
+      ]
+    }
+  },
   "schemas": {},
   "sequences": {},
   "roles": {},

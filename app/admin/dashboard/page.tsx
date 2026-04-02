@@ -35,7 +35,7 @@ export default function AdminDashboardPage() {
               Recent signups
             </h2>
             <a
-              href="/admin/customers"
+              href="/(admin)/customers"
               className="text-xs font-medium text-emerald-400 hover:text-emerald-300"
             >
               View all
@@ -86,4 +86,3 @@ export default function AdminDashboardPage() {
     </div>
   );
 }
-

@@ -1,19 +1,16 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import { PublicNav } from "@/components/layout/PublicNav";
 
-export const metadata: Metadata = {
-  title: "Kind Diners Society",
-  description: "Membership and restaurant discovery platform",
-};
-
-export default function RootLayout({
+export default function PublicLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className="antialiased">{children}</body>
-    </html>
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-white">
+      <PublicNav />
+      <main className="mx-auto max-w-6xl px-4 pb-16 pt-10 md:px-6 lg:px-8">
+        {children}
+      </main>
+    </div>
   );
 }
