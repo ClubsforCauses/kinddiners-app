@@ -72,29 +72,53 @@ export default function HomePage() {
               View All →
             </a>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { name: 'Willow Street Wine Bar', neighborhood: 'Downtown', cuisine: 'Modern American' },
-              { name: 'La Plaza Cantina', neighborhood: 'Midtown', cuisine: 'Mexican' },
-              { name: 'Harbor Roof Lounge', neighborhood: 'Waterfront', cuisine: 'Cocktails & Small Plates' },
+              {
+                name: 'Willow Street Wine Bar',
+                location: 'Downtown',
+                cuisine: 'Modern American',
+                image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop',
+                discount: '20% Off'
+              },
+              {
+                name: 'La Plaza Cantina',
+                location: 'Midtown',
+                cuisine: 'Mexican',
+                image: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&h=400&fit=crop',
+                discount: '15% Off'
+              },
+              {
+                name: 'Harbor Roof Lounge',
+                location: 'Waterfront',
+                cuisine: 'Cocktails & Small Plates',
+                image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&h=400&fit=crop',
+                discount: '25% Off'
+              },
             ].map((restaurant) => (
               <div
                 key={restaurant.name}
-                className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-orange-200 hover:shadow-lg"
+                className="group overflow-hidden rounded-2xl border border-black/6 bg-white transition hover:shadow-md"
               >
-                <div className="space-y-3">
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-orange-600">
-                    {restaurant.name}
-                  </h3>
-                  <div className="space-y-1 text-sm text-gray-600">
-                    <p>{restaurant.neighborhood} · {restaurant.cuisine}</p>
-                    <p className="text-xs">One visit every 7 days</p>
-                  </div>
-                  <div className="flex items-center justify-between pt-2">
-                    <span className="text-xs text-gray-500">Member Favorite</span>
-                    <span className="rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-700">
-                      Featured
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={restaurant.image}
+                    alt={restaurant.name}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="space-y-3 p-6">
+                  <div className="flex items-start justify-between">
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {restaurant.name}
+                    </h3>
+                    <span className="rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white">
+                      {restaurant.discount}
                     </span>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-sm font-medium text-gray-900">{restaurant.cuisine}</p>
+                    <p className="text-sm text-gray-600">{restaurant.location}</p>
                   </div>
                 </div>
               </div>
