@@ -1,6 +1,11 @@
+import kdsLogo from '@/app/assets/kds-logo.svg';
+
 export default function LoginPage() {
   return (
     <div className="mx-auto flex max-w-md flex-col gap-8 py-8">
+      <div className="flex justify-center">
+        <img src={kdsLogo.src} alt="Kind Diners Society" className="h-12 md:h-14 mb-8" />
+      </div>
       <div className="space-y-3 text-center">
         <h1 className="text-2xl font-semibold tracking-tight text-slate-900">
           Welcome back

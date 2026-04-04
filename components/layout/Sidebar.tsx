@@ -1,3 +1,5 @@
+import kdsLogo from '@/app/assets/kds-logo.svg';
+
 type SidebarItem = {
   label: string;
   href: string;
@@ -13,6 +15,9 @@ export function Sidebar({ title, items }: SidebarProps) {
   return (
     <aside className="hidden w-64 shrink-0 border-r border-gray-200 bg-white/80 px-4 py-4 lg:flex lg:flex-col">
       <div className="mb-6">
+        <a href="/" className="block mb-4">
+          <img src={kdsLogo.src} alt="Kind Diners Society" className="h-8" />
+        </a>
         <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
           {title}
         </p>

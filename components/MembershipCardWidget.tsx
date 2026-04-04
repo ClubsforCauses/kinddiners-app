@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import kdsLogo from '@/app/assets/kds-logo.svg';
 
 export function MembershipCardWidget() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -36,12 +37,12 @@ export function MembershipCardWidget() {
                 >
                   <div className="flex h-full flex-col justify-between">
                     <div className="flex justify-between">
-                      <img src="/assets/kds-logo.svg" alt="KDS" className="h-6 opacity-95" />
+                      <img src="{kdsLogo.src}" alt="KDS" className="h-6 opacity-95" />
                       <div className="text-xs font-semibold text-white/80">MEMBER</div>
                     </div>
 
                     <div className="text-center">
-                      <img src="/assets/kds-logo.svg" alt="KDS" className="mx-auto h-10 opacity-95" />
+                      <img src="{kdsLogo.src}" alt="KDS" className="mx-auto h-10 opacity-95" />
                     </div>
 
                     <div className="flex items-end justify-between">
@@ -67,7 +68,7 @@ export function MembershipCardWidget() {
                 >
                   <div className="flex h-full flex-col items-center justify-between">
                     <div className="flex w-full justify-between">
-                      <img src="/assets/kds-logo.svg" alt="KDS" className="h-6 opacity-95" />
+                      <img src="{kdsLogo.src}" alt="KDS" className="h-6 opacity-95" />
                       <div className="text-xs font-semibold text-white/80">QR CODE</div>
                     </div>
 
