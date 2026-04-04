@@ -1,10 +1,11 @@
 import { MarketingLayout } from '@/components/layout/MarketingLayout';
+import { MembershipCardWidget } from '@/components/MembershipCardWidget';
 
 export default function HomePage() {
   return (
     <MarketingLayout>
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-        <section className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <section className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
           <div className="space-y-8">
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full bg-orange-50 px-4 py-2 text-sm font-medium text-orange-700">
@@ -51,46 +52,7 @@ export default function HomePage() {
             </dl>
           </div>
 
-          <div className="rounded-3xl border border-orange-100 bg-white p-8 shadow-xl shadow-orange-500/10">
-            <p className="text-sm font-semibold uppercase tracking-wide text-orange-600">
-              How It Works
-            </p>
-            <ol className="mt-6 space-y-6">
-              <li className="flex gap-4">
-                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-base font-bold text-white shadow-lg">
-                  1
-                </span>
-                <div className="pt-1">
-                  <h3 className="font-semibold text-gray-900">Choose Your Membership</h3>
-                  <p className="mt-1 text-sm text-gray-600">
-                    Select Classic or Ambassador tier and unlock curated dining experiences.
-                  </p>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-base font-bold text-white shadow-lg">
-                  2
-                </span>
-                <div className="pt-1">
-                  <h3 className="font-semibold text-gray-900">Discover & Visit</h3>
-                  <p className="mt-1 text-sm text-gray-600">
-                    Browse partner restaurants and redeem your exclusive visits.
-                  </p>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-base font-bold text-white shadow-lg">
-                  3
-                </span>
-                <div className="pt-1">
-                  <h3 className="font-semibold text-gray-900">Refer & Earn</h3>
-                  <p className="mt-1 text-sm text-gray-600">
-                    Share your link and earn payouts when friends join the society.
-                  </p>
-                </div>
-              </li>
-            </ol>
-          </div>
+          <MembershipCardWidget />
         </section>
 
         <section className="mt-20 space-y-8">
