@@ -1,3 +1,5 @@
+import kdsLogo from '@/app/assets/kds-logo.svg';
+
 type NavItem = {
   label: string;
   href: string;
@@ -15,19 +17,9 @@ export function PublicNav() {
   return (
     <header className="border-b border-gray-200 bg-white/80 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
-        <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-sm font-semibold text-white">
-            KD
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-semibold text-gray-900">
-              Kind Diners Society
-            </span>
-            <span className="text-xs text-gray-500">
-              Dine out, do good.
-            </span>
-          </div>
-        </div>
+        <a href="/" className="flex items-center">
+          <img src={kdsLogo.src} alt="Kind Diners Society" className="h-10 md:h-12" />
+        </a>
 
         <div className="hidden items-center gap-8 md:flex">
           <ul className="flex items-center gap-6 text-sm font-medium text-gray-700">

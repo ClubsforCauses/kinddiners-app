@@ -1,17 +1,12 @@
+import kdsLogo from '@/app/assets/kds-logo.svg';
+
 export function MarketingFooter() {
   return (
     <footer className="border-t border-gray-200 bg-gray-900 text-gray-300">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 shadow-sm">
-                <span className="text-base font-bold text-white">KDS</span>
-              </div>
-              <span className="text-lg font-semibold text-white" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                Kind Diners Society
-              </span>
-            </div>
+            <img src={kdsLogo.src} alt="Kind Diners Society" className="h-10 brightness-0 invert" />
             <p className="text-sm leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Discover exceptional restaurants, support local hospitality, and give back with every meal.
             </p>

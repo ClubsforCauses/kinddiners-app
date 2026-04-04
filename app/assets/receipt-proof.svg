@@ -1,0 +1,56 @@
+<svg width="320" height="480" viewBox="0 0 320 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Receipt Background -->
+  <rect width="320" height="480" rx="8" fill="white"/>
+
+  <!-- Receipt Header -->
+  <text x="160" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#111827" text-anchor="middle">RECEIPT</text>
+  <text x="160" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">Kind Diners Society</text>
+
+  <!-- Dashed Line -->
+  <line x1="30" y1="80" x2="290" y2="80" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Restaurant Name -->
+  <text x="30" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">Willow Street Wine Bar</text>
+  <text x="30" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6B7280">Downtown · Modern American</text>
+
+  <!-- Line Items -->
+  <text x="30" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#374151">Seasonal Tasting Menu</text>
+  <text x="290" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#374151" text-anchor="end">$85.00</text>
+
+  <text x="30" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#374151">Wine Pairing</text>
+  <text x="290" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#374151" text-anchor="end">$45.00</text>
+
+  <text x="30" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#374151">Artisan Dessert</text>
+  <text x="290" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#374151" text-anchor="end">$15.00</text>
+
+  <!-- Dashed Line -->
+  <line x1="30" y1="235" x2="290" y2="235" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Subtotal -->
+  <text x="30" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6B7280">Subtotal</text>
+  <text x="290" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6B7280" text-anchor="end">$145.00</text>
+
+  <!-- Tax -->
+  <text x="30" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6B7280">Tax (8%)</text>
+  <text x="290" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6B7280" text-anchor="end">$11.60</text>
+
+  <!-- Member Discount - HIGHLIGHTED -->
+  <rect x="25" y="295" width="270" height="30" rx="4" fill="#FEF3E2"/>
+  <text x="30" y="313" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#EA580C">Member Discount (20%)</text>
+  <text x="290" y="313" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#EA580C" text-anchor="end">-$29.00</text>
+
+  <!-- Solid Line -->
+  <line x1="30" y1="345" x2="290" y2="345" stroke="#111827" stroke-width="2"/>
+
+  <!-- Total -->
+  <text x="30" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111827">TOTAL PAID</text>
+  <text x="290" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111827" text-anchor="end">$127.60</text>
+
+  <!-- Savings Badge -->
+  <rect x="80" y="395" width="160" height="32" rx="16" fill="#EA580C"/>
+  <text x="160" y="417" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="white" text-anchor="middle">You Saved $29.00</text>
+
+  <!-- Footer -->
+  <text x="160" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#9CA3AF" text-anchor="middle">Thank you for supporting local hospitality</text>
+  <text x="160" y="468" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#D1D5DB" text-anchor="middle">kinddiners.com</text>
+</svg>

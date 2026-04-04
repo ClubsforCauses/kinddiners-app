@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import kdsLogo from '@/app/assets/kds-logo.svg';
 
 type NavItem = {
   label: string;
@@ -22,12 +23,7 @@ export function MarketingNav() {
     <header className="fixed top-0 z-50 w-full border-b border-amber-100/50 bg-amber-50/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 shadow-sm">
-            <span className="text-base font-bold text-white">KDS</span>
-          </div>
-          <span className="hidden text-lg font-semibold tracking-tight text-gray-900 sm:block" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-            Kind Diners Society
-          </span>
+          <img src={kdsLogo.src} alt="Kind Diners Society" className="h-10 md:h-12" />
         </a>
 
         <div className="hidden items-center gap-8 lg:flex">
