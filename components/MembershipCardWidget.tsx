@@ -1,6 +1,10 @@
 'use client';
 
+import { useState } from 'react';
+
 export function MembershipCardWidget() {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   return (
     <div className="relative flex items-center justify-center">
       <div className="absolute inset-0 flex items-center justify-center">
@@ -9,58 +13,146 @@ export function MembershipCardWidget() {
 
       <div className="relative z-10 w-full max-w-sm animate-fade-up">
         <div className="rounded-2xl border-2 border-orange-500 bg-white p-6 shadow-lg md:p-8">
-          <div className="mb-4 flex justify-center">
-            <div className="relative w-[150px] md:w-[170px]">
-              <div className="animate-float">
-                <svg
-                  viewBox="0 0 340 214"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-full rotate-[-4deg] drop-shadow-[0_10px_20px_rgba(0,0,0,0.12)] opacity-[0.97]"
+          <div className="mb-4 flex justify-center" style={{ perspective: '1000px' }}>
+            <div
+              className="relative w-[280px] cursor-pointer"
+              style={{ transformStyle: 'preserve-3d' }}
+              onClick={() => setIsFlipped(!isFlipped)}
+            >
+              <div
+                className="transition-transform duration-700"
+                style={{
+                  transformStyle: 'preserve-3d',
+                  transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+                }}
+              >
+                <div
+                  className="rounded-2xl p-6 shadow-xl"
+                  style={{
+                    background: 'linear-gradient(180deg, #F28A2B 0%, #E97B22 55%, #D96A1E 100%)',
+                    backfaceVisibility: 'hidden',
+                    height: '176px',
+                  }}
                 >
-                  <rect width="340" height="214" rx="16" fill="url(#silver-gradient)" />
+                  <div className="flex h-full flex-col justify-between">
+                    <div className="flex justify-between">
+                      <img src="/assets/kds-logo.svg" alt="KDS" className="h-6 opacity-95" />
+                      <div className="text-xs font-semibold text-white/80">MEMBER</div>
+                    </div>
 
-                  <defs>
-                    <linearGradient id="silver-gradient" x1="0" y1="0" x2="340" y2="214" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#E5E7EB" />
-                      <stop offset="0.5" stopColor="#F3F4F6" />
-                      <stop offset="1" stopColor="#D1D5DB" />
-                    </linearGradient>
-                  </defs>
+                    <div className="text-center">
+                      <img src="/assets/kds-logo.svg" alt="KDS" className="mx-auto h-10 opacity-95" />
+                    </div>
 
-                  <circle cx="40" cy="40" r="20" fill="#F97316" opacity="0.9" />
+                    <div className="flex items-end justify-between">
+                      <div>
+                        <div className="text-xs font-medium text-white/70">Member Name</div>
+                        <div className="text-sm font-semibold text-white">Guest Member</div>
+                      </div>
+                      <div className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white">
+                        ACTIVE
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                  <text x="40" y="48" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="Plus Jakarta Sans, sans-serif">
-                    KDS
-                  </text>
+                <div
+                  className="absolute inset-0 rounded-2xl p-6 shadow-xl"
+                  style={{
+                    background: 'linear-gradient(180deg, #F28A2B 0%, #E97B22 55%, #D96A1E 100%)',
+                    backfaceVisibility: 'hidden',
+                    transform: 'rotateY(180deg)',
+                    height: '176px',
+                  }}
+                >
+                  <div className="flex h-full flex-col items-center justify-between">
+                    <div className="flex w-full justify-between">
+                      <img src="/assets/kds-logo.svg" alt="KDS" className="h-6 opacity-95" />
+                      <div className="text-xs font-semibold text-white/80">QR CODE</div>
+                    </div>
 
-                  <text x="20" y="85" fill="#6B7280" fontSize="14" fontWeight="600" fontFamily="Plus Jakarta Sans, sans-serif">
-                    Kind Diners Society
-                  </text>
+                    <div className="flex items-center justify-center rounded-lg bg-white p-2">
+                      <svg width="100" height="100" viewBox="0 0 100 100">
+                        <rect width="100" height="100" fill="white" />
+                        <g fill="#000000">
+                          <rect x="0" y="0" width="10" height="10" />
+                          <rect x="10" y="0" width="10" height="10" />
+                          <rect x="20" y="0" width="10" height="10" />
+                          <rect x="30" y="0" width="10" height="10" />
+                          <rect x="40" y="0" width="10" height="10" />
+                          <rect x="50" y="0" width="10" height="10" />
+                          <rect x="60" y="0" width="10" height="10" />
+                          <rect x="80" y="0" width="10" height="10" />
+                          <rect x="0" y="10" width="10" height="10" />
+                          <rect x="60" y="10" width="10" height="10" />
+                          <rect x="80" y="10" width="10" height="10" />
+                          <rect x="90" y="10" width="10" height="10" />
+                          <rect x="0" y="20" width="10" height="10" />
+                          <rect x="20" y="20" width="10" height="10" />
+                          <rect x="30" y="20" width="10" height="10" />
+                          <rect x="40" y="20" width="10" height="10" />
+                          <rect x="60" y="20" width="10" height="10" />
+                          <rect x="80" y="20" width="10" height="10" />
+                          <rect x="0" y="30" width="10" height="10" />
+                          <rect x="20" y="30" width="10" height="10" />
+                          <rect x="30" y="30" width="10" height="10" />
+                          <rect x="40" y="30" width="10" height="10" />
+                          <rect x="60" y="30" width="10" height="10" />
+                          <rect x="80" y="30" width="10" height="10" />
+                          <rect x="0" y="40" width="10" height="10" />
+                          <rect x="20" y="40" width="10" height="10" />
+                          <rect x="30" y="40" width="10" height="10" />
+                          <rect x="40" y="40" width="10" height="10" />
+                          <rect x="60" y="40" width="10" height="10" />
+                          <rect x="80" y="40" width="10" height="10" />
+                          <rect x="90" y="40" width="10" height="10" />
+                          <rect x="0" y="50" width="10" height="10" />
+                          <rect x="60" y="50" width="10" height="10" />
+                          <rect x="0" y="60" width="10" height="10" />
+                          <rect x="10" y="60" width="10" height="10" />
+                          <rect x="20" y="60" width="10" height="10" />
+                          <rect x="30" y="60" width="10" height="10" />
+                          <rect x="40" y="60" width="10" height="10" />
+                          <rect x="50" y="60" width="10" height="10" />
+                          <rect x="60" y="60" width="10" height="10" />
+                          <rect x="80" y="60" width="10" height="10" />
+                          <rect x="10" y="70" width="10" height="10" />
+                          <rect x="20" y="70" width="10" height="10" />
+                          <rect x="40" y="70" width="10" height="10" />
+                          <rect x="50" y="70" width="10" height="10" />
+                          <rect x="70" y="70" width="10" height="10" />
+                          <rect x="80" y="70" width="10" height="10" />
+                          <rect x="90" y="70" width="10" height="10" />
+                          <rect x="0" y="80" width="10" height="10" />
+                          <rect x="10" y="80" width="10" height="10" />
+                          <rect x="30" y="80" width="10" height="10" />
+                          <rect x="40" y="80" width="10" height="10" />
+                          <rect x="60" y="80" width="10" height="10" />
+                          <rect x="70" y="80" width="10" height="10" />
+                          <rect x="90" y="80" width="10" height="10" />
+                          <rect x="20" y="90" width="10" height="10" />
+                          <rect x="30" y="90" width="10" height="10" />
+                          <rect x="40" y="90" width="10" height="10" />
+                          <rect x="50" y="90" width="10" height="10" />
+                          <rect x="70" y="90" width="10" height="10" />
+                          <rect x="80" y="90" width="10" height="10" />
+                          <rect x="90" y="90" width="10" height="10" />
+                        </g>
+                      </svg>
+                    </div>
 
-                  <text x="20" y="110" fill="#9CA3AF" fontSize="11" fontFamily="DM Sans, sans-serif">
-                    MEMBER SINCE 2026
-                  </text>
-
-                  <rect x="20" y="130" width="120" height="8" rx="4" fill="#E5E7EB" />
-                  <rect x="20" y="145" width="90" height="8" rx="4" fill="#E5E7EB" />
-
-                  <text x="20" y="180" fill="#9CA3AF" fontSize="10" fontFamily="DM Sans, sans-serif">
-                    •••• •••• •••• 4242
-                  </text>
-
-                  <g opacity="0.1">
-                    <circle cx="280" cy="60" r="60" fill="#F97316" />
-                    <circle cx="300" cy="140" r="40" fill="#F97316" />
-                  </g>
-                </svg>
+                    <div className="text-center">
+                      <div className="text-xs font-medium text-white/70">Scan to redeem</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="space-y-4 text-center">
             <p className="text-sm font-medium text-gray-600">
-              No active membership yet
+              Click card to flip and view QR code
             </p>
 
             <div className="space-y-3">
