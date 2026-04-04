@@ -1,5 +1,6 @@
 import { MarketingLayout } from '@/components/layout/MarketingLayout';
 import { MembershipCardWidget } from '@/components/MembershipCardWidget';
+import { PartnerCarousel } from '@/components/PartnerCarousel';
 
 export default function HomePage() {
   return (
@@ -53,6 +54,10 @@ export default function HomePage() {
           </div>
 
           <MembershipCardWidget />
+        </section>
+
+        <section className="mt-20">
+          <PartnerCarousel />
         </section>
 
         <section className="mt-20 space-y-8">
