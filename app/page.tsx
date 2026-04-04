@@ -125,6 +125,73 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+        <section className="mt-32">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            <div className="flex justify-center">
+              <img
+                src="/assets/receipt-proof.svg"
+                alt="Member savings receipt proof"
+                className="w-full max-w-[320px] rounded-lg shadow-sm"
+              />
+            </div>
+
+            <div className="rounded-3xl border-2 border-orange-600 bg-white p-8">
+              <div className="space-y-6">
+                <div>
+                  <div className="mb-2 inline-block rounded-full bg-orange-50 px-3 py-1 text-sm font-semibold text-orange-700">
+                    Most Popular
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900">Annual Membership</h3>
+                  <div className="mt-4 flex items-baseline gap-2">
+                    <span className="text-5xl font-bold text-gray-900">$199</span>
+                    <span className="text-lg text-gray-600">/year</span>
+                  </div>
+                </div>
+
+                <ul className="space-y-4">
+                  {[
+                    'Unlimited restaurant visits every 7 days',
+                    'Access to 50+ partner venues',
+                    'Average savings of $29 per visit',
+                    'Exclusive member-only events',
+                    'Priority reservations',
+                    'Referral rewards program',
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-start gap-3">
+                      <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="space-y-3 border-t border-gray-200 pt-6">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-600">Average visits per year</span>
+                    <span className="font-semibold text-gray-900">50+</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-600">Total potential savings</span>
+                    <span className="font-semibold text-orange-600">$1,450+</span>
+                  </div>
+                </div>
+
+                <a
+                  href="/memberships"
+                  className="block w-full rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 text-center text-base font-semibold text-white shadow-xl shadow-orange-500/30 transition-all hover:shadow-2xl hover:shadow-orange-500/40"
+                >
+                  Get Started Today
+                </a>
+
+                <p className="text-center text-xs text-gray-500">
+                  30-day money-back guarantee · Cancel anytime
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </MarketingLayout>
   );
