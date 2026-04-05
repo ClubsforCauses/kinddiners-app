@@ -1,4 +1,4 @@
-import kdsLogo from '@/app/assets/kds-logo.svg';
+import { Logo } from '@/components/ui/Logo';
 
 type NavItem = {
   label: string;
@@ -18,7 +18,7 @@ export function PublicNav() {
     <header className="border-b border-gray-200 bg-white/80 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
         <a href="/" className="flex items-center">
-          <img src={kdsLogo.src} alt="Kind Diners Society" className="h-10 md:h-12" />
+          <Logo className="h-10 object-contain" width={150} height={40} />
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

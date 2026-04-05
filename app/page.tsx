@@ -1,7 +1,7 @@
 import { MarketingLayout } from '@/components/layout/MarketingLayout';
 import { MembershipCardWidget } from '@/components/MembershipCardWidget';
 import { PartnerCarousel } from '@/components/PartnerCarousel';
-import kdsLogo from '@/app/assets/kds-logo.svg';
+import { Logo } from '@/components/ui/Logo';
 
 export default function HomePage() {
   return (
@@ -129,7 +129,7 @@ export default function HomePage() {
 
         <section className="mt-32 space-y-12">
           <div className="text-center">
-            <img src={kdsLogo.src} alt="Kind Diners Society" className="mx-auto h-10 md:h-12 mb-4 opacity-90" />
+            <Logo className="mx-auto h-10 md:h-12 mb-4 opacity-90 object-contain" width={180} height={48} />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Join Kind Diners Society in three simple steps and start experiencing exceptional dining.
@@ -238,7 +238,7 @@ export default function HomePage() {
 
         <section className="mt-32">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100/50 p-8 md:p-12">
-            <img src={kdsLogo.src} alt="Kind Diners Society" className="h-8 opacity-80 mb-6" />
+            <Logo className="h-8 opacity-80 mb-6 object-contain" width={120} height={32} />
 
             <div className="relative z-10 max-w-3xl">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Making a Difference</h2>
@@ -259,7 +259,7 @@ export default function HomePage() {
               </div>
 
               <div className="relative rounded-xl border-2 border-orange-200 bg-white p-6 shadow-sm">
-                <img src={kdsLogo.src} alt="Kind Diners Society" className="absolute top-4 right-4 h-6 opacity-70" />
+                <Logo className="absolute top-4 right-4 h-6 opacity-70 object-contain" width={80} height={24} />
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
                     <div className="h-12 w-12 rounded-full bg-orange-100 flex items-center justify-center">
@@ -285,7 +285,7 @@ export default function HomePage() {
 
         <section className="mt-32 space-y-12">
           <div className="text-center">
-            <img src={kdsLogo.src} alt="Kind Diners Society" className="mx-auto h-10 mb-4 opacity-90" />
+            <Logo className="mx-auto h-10 mb-4 opacity-90 object-contain" width={150} height={40} />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">What Members Are Saying</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Join hundreds of food lovers who are discovering amazing restaurants and saving money.
@@ -294,7 +294,7 @@ export default function HomePage() {
 
           <div className="relative">
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <img src={kdsLogo.src} alt="" className="w-64 opacity-5" />
+              <Logo className="w-64 opacity-5 object-contain" width={256} height={100} alt="" />
             </div>
 
             <div className="relative grid gap-8 md:grid-cols-3">
