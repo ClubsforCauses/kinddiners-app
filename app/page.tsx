@@ -1,6 +1,7 @@
 import { MarketingLayout } from '@/components/layout/MarketingLayout';
 import { MembershipCardWidget } from '@/components/MembershipCardWidget';
 import { PartnerCarousel } from '@/components/PartnerCarousel';
+import kdsLogo from '@/app/assets/kds-logo.svg';
 
 export default function HomePage() {
   return (
@@ -126,6 +127,48 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="mt-32 space-y-12">
+          <div className="text-center">
+            <img src={kdsLogo.src} alt="Kind Diners Society" className="mx-auto h-10 md:h-12 mb-4 opacity-90" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join Kind Diners Society in three simple steps and start experiencing exceptional dining.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="text-center space-y-4">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100">
+                <span className="text-2xl font-bold text-orange-600">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Choose Your Membership</h3>
+              <p className="text-gray-600">
+                Select the plan that fits your dining style. All members get access to our curated restaurant network.
+              </p>
+            </div>
+
+            <div className="text-center space-y-4">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100">
+                <span className="text-2xl font-bold text-orange-600">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Discover & Book</h3>
+              <p className="text-gray-600">
+                Browse our partner restaurants, view exclusive discounts, and make reservations directly through the app.
+              </p>
+            </div>
+
+            <div className="text-center space-y-4">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100">
+                <span className="text-2xl font-bold text-orange-600">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Dine & Save</h3>
+              <p className="text-gray-600">
+                Show your digital membership card, enjoy amazing food, and save on every visit. It pays for itself quickly.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="mt-32">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div className="flex justify-center">
@@ -188,6 +231,122 @@ export default function HomePage() {
                 <p className="text-center text-xs text-gray-500">
                   30-day money-back guarantee · Cancel anytime
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-32">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100/50 p-8 md:p-12">
+            <img src={kdsLogo.src} alt="Kind Diners Society" className="h-8 opacity-80 mb-6" />
+
+            <div className="relative z-10 max-w-3xl">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Making a Difference</h2>
+              <p className="text-lg text-gray-700 mb-8">
+                Every meal you enjoy as a Kind Diners Society member directly supports local restaurants and hospitality workers.
+                We're building a community that values exceptional dining experiences while making a positive impact on the industry.
+              </p>
+
+              <div className="grid gap-6 sm:grid-cols-2 mb-8">
+                <div className="rounded-xl bg-white/80 backdrop-blur p-6 shadow-sm">
+                  <div className="text-3xl font-bold text-orange-600 mb-2">$150K+</div>
+                  <div className="text-sm font-medium text-gray-900">Revenue to Local Restaurants</div>
+                </div>
+                <div className="rounded-xl bg-white/80 backdrop-blur p-6 shadow-sm">
+                  <div className="text-3xl font-bold text-orange-600 mb-2">2,500+</div>
+                  <div className="text-sm font-medium text-gray-900">Member Dining Experiences</div>
+                </div>
+              </div>
+
+              <div className="relative rounded-xl border-2 border-orange-200 bg-white p-6 shadow-sm">
+                <img src={kdsLogo.src} alt="Kind Diners Society" className="absolute top-4 right-4 h-6 opacity-70" />
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 rounded-full bg-orange-100 flex items-center justify-center">
+                      <svg className="h-6 w-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-gray-700 italic mb-3">
+                      "As a restaurant owner, Kind Diners Society has brought us consistent business and introduced us to wonderful customers who truly appreciate hospitality."
+                    </p>
+                    <div>
+                      <div className="font-semibold text-gray-900">Marcus Chen</div>
+                      <div className="text-sm text-gray-600">Owner, Willow Street Wine Bar</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-32 space-y-12">
+          <div className="text-center">
+            <img src={kdsLogo.src} alt="Kind Diners Society" className="mx-auto h-10 mb-4 opacity-90" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Members Are Saying</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join hundreds of food lovers who are discovering amazing restaurants and saving money.
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <img src={kdsLogo.src} alt="" className="w-64 opacity-5" />
+            </div>
+
+            <div className="relative grid gap-8 md:grid-cols-3">
+              <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="h-5 w-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4">
+                  "This membership has completely changed how we dine out. We've discovered incredible restaurants we never would have tried, and the savings are real."
+                </p>
+                <div>
+                  <div className="font-semibold text-gray-900">Sarah Johnson</div>
+                  <div className="text-sm text-gray-600">Member since 2025</div>
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="h-5 w-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4">
+                  "Best decision I made this year. The membership paid for itself in the first month, and I'm supporting local businesses at the same time."
+                </p>
+                <div>
+                  <div className="font-semibold text-gray-900">David Martinez</div>
+                  <div className="text-sm text-gray-600">Member since 2024</div>
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="h-5 w-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4">
+                  "Love the variety of restaurants and the exclusive experiences. The referral program is a nice bonus too. Highly recommend!"
+                </p>
+                <div>
+                  <div className="font-semibold text-gray-900">Emily Chen</div>
+                  <div className="text-sm text-gray-600">Member since 2025</div>
+                </div>
               </div>
             </div>
           </div>
